@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Neural_Network;
 
-namespace Neural_Network.Neurons
+namespace Neural_Network
 {
     /*workflow: 
      Recieve input values from one or more weighted input connections
@@ -15,10 +16,10 @@ namespace Neural_Network.Neurons
     
     public interface INeuron
     {
-        Guid ID { get; }
-        double PreviousPartialDerivate { get; set; }
-        List <Isynapse> Inputs { get; set; }
-        List<Isynapse> Outputs { get; set; }
+        Guid Id { get; }
+        double PreviousPartialDerivative { get; set; }
+        List <ISynapse> Inputs { get; set; }
+        List<ISynapse> Outputs { get; set; }
 
         void AddInputNeuron(INeuron inputNeuron);
         void AddOutputNeuron(INeuron outputNeuron);

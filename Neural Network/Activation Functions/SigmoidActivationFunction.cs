@@ -14,5 +14,10 @@ namespace Neural_Network
         {
             _coefficient = coefficient;
         }
+
+        public double CalculateOutput(double input)
+        {
+            return (1 / (1 + Math.Exp(-input * _coefficient)));
+        }
     }
 }
